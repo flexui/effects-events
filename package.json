@@ -1,0 +1,33 @@
+{
+  "name": "@flexui/effects-events",
+  "version": "0.0.1",
+  "description": "The flex ui css3 effects events tools.",
+  "author": {
+    "name": "nuintun",
+    "email": "nuintun@qq.com"
+  },
+  "homepage": "https://flexui.github.io/effects-events",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/flexui/effects-events.git"
+  },
+  "bugs": {
+    "url": "https://github.com/flexui/effects-events/issues",
+    "email": "nuintun@qq.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "effects",
+    "events"
+  ],
+  "jsnext:main": "effects-events.js",
+  "dependencies": {
+    "@flexui/utils": "https://github.com/flexui/utils/archive/master.tar.gz"
+  },
+  "devDependencies": {
+    "rollup": "^0.36.4",
+    "uglify-js": "^2.7.5",
+    "rollup-plugin-node-resolve": "^2.0.0"
+  },
+  "readmeFilename": "README.md"
+}
