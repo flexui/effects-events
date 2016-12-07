@@ -4,7 +4,7 @@ import * as Utils from '@flexui/utils';
 var styles = document.documentElement.style;
 
 // animationend 映射表
-export var ANIMATIONEND_EVENTS = {
+var ANIMATIONEND_EVENTS = {
   animation: 'animationend',
   WebkitAnimation: 'webkitAnimationEnd',
   MozAnimation: 'mozAnimationEnd',
@@ -12,9 +12,8 @@ export var ANIMATIONEND_EVENTS = {
   msAnimation: 'MSAnimationEnd',
   KhtmlAnimation: 'khtmlAnimationEnd'
 };
-
 // transition 映射表
-export var TRANSITIONEND_EVENTS = {
+var TRANSITIONEND_EVENTS = {
   transition: 'transitionend',
   WebkitTransition: 'webkitTransitionEnd',
   MozTransition: 'mozTransitionEnd',
@@ -37,10 +36,9 @@ function detector(maps) {
 }
 
 // animation
-export var ANIMATION = detector(ANIMATIONEND_EVENTS);
-
+var ANIMATION = detector(ANIMATIONEND_EVENTS);
 // transition
-export var TRANSITION = detector(TRANSITIONEND_EVENTS);
+var TRANSITION = detector(TRANSITIONEND_EVENTS);
 
 /**
  * toMs
