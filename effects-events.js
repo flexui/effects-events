@@ -108,13 +108,13 @@ function getEffectsInfo(element) {
 }
 
 /**
- * whenEffectsEnd
+ * effectsEnd
  * @export
  * @param {jQueryElement} node
  * @param {Function} callback
  * @see https://github.com/vuejs/vue/blob/dev/src/platforms/web/runtime/transition-util.js
  */
-export function onend(node, callback) {
+export function effectsEnd(node, callback) {
   // 不支持动画
   if (!ANIMATION && !TRANSITION) {
     return callback();
