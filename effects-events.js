@@ -92,16 +92,16 @@ function getEffectsInfo(element) {
   var animationDurations = toArray(styles.getPropertyValue(ANIMATION + '-duration'));
   var animationTimeout = getTimeout(animationDelays, animationDurations);
 
-  var type;
+  var effect;
   var count;
   var timeout;
 
   timeout = Math.max(transitionTimeout, animationTimeout);
-  type = timeout > 0 ? (transitionTimeout > animationTimeout ? TRANSITION : ANIMATION) : null;
-  count = type ? (type === TRANSITION ? transitionDurations.length : animationDurations.length) : 0;
+  effect = timeout > 0 ? (transitionTimeout > animationTimeout ? TRANSITION : ANIMATION) : null;
+  count = effect ? (effect === TRANSITION ? transitionDurations.length : animationDurations.length) : 0;
 
   return {
-    type: type,
+    effect: effect,
     count: count,
     timeout: timeout
   };
@@ -122,17 +122,17 @@ export function effectsEnd(node, callback) {
 
   var element = node[0];
   var info = getEffectsInfo(element);
-  var type = info.type;
+  var effect = info.effect;
 
   // 没有动画
-  if (!type) {
+  if (!effect) {
     return callback();
   }
 
   var ended = 0;
   var count = info.count;
   var timeout = info.timeout;
-  var event = type === TRANSITION ?
+  var event = effect === TRANSITION ?
     TRANSITIONEND_EVENTS[TRANSITION] :
     ANIMATIONEND_EVENTS[ANIMATION];
 
