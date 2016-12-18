@@ -42,6 +42,7 @@ var TRANSITION = detector(TRANSITIONEND_EVENTS);
 
 /**
  * toMs
+ *
  * @param {String} value
  * @returns
  */
@@ -51,6 +52,7 @@ function toMs(value) {
 
 /**
  * getTimeout
+ *
  * @param {Array} delays
  * @param {Array} durations
  * @returns
@@ -69,6 +71,7 @@ function getTimeout(delays, durations) {
 
 /**
  * toArray
+ *
  * @param {any} value
  * @returns {Array}
  */
@@ -78,6 +81,7 @@ function toArray(value) {
 
 /**
  * getEffectsInfo
+ *
  * @param {HTMLElement} element
  * @returns
  */
@@ -107,6 +111,7 @@ function getEffectsInfo(element) {
 
 /**
  * effectsEnd
+ *
  * @export
  * @param {jQueryElement} node
  * @param {Function} callback
